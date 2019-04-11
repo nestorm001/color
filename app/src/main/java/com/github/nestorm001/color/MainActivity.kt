@@ -13,8 +13,10 @@ class MainActivity : AppCompatActivity() {
         input.addTextChangedListener {
             it?.run {
                 val string = this.toString()
-                string.printColor()
-                color.setBackgroundColor(string.toRGB())
+                string.printColor(ColorMode.HSV)
+                hsv.setBackgroundColor(string.toColor(ColorMode.HSV))
+                string.printColor(ColorMode.RGB)
+                rgb.setBackgroundColor(string.toColor(ColorMode.RGB))
             }
         }
     }
