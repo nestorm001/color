@@ -47,7 +47,7 @@ fun String.toColor(@ColorMode.Mode colorMode: Int = ColorMode.RGB): Int {
 fun String.printColor(@ColorMode.Mode colorMode: Int = ColorMode.RGB) {
     when (colorMode) {
         ColorMode.HSV -> print("HSV", toHSVColor())
-        else -> print("HSV", toRGB())
+        else -> print("RGB", toRGB())
     }
 }
 
