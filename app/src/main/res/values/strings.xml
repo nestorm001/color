@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Color</string>
+    <string name="rgb">RGB Color %s is shown here!</string>
+    <string name="hsv">HSV Color %s is shown here!</string>
 </resources>

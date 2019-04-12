@@ -14,9 +14,16 @@ class MainActivity : AppCompatActivity() {
             it?.run {
                 val string = this.toString()
                 string.printColor(ColorMode.HSV)
-                hsv.setBackgroundColor(string.toColor(ColorMode.HSV))
+                val hsvColor = string.toColor(ColorMode.HSV)
+                hsv.setBackgroundColor(hsvColor)
+                hsv.text = getString(R.string.hsv, hsvColor.toHex())
+                hsv.setTextColor(invertColor(hsvColor))
+
                 string.printColor(ColorMode.RGB)
+                val rgbColor = string.toColor(ColorMode.RGB)
                 rgb.setBackgroundColor(string.toColor(ColorMode.RGB))
+                rgb.text = getString(R.string.rgb, rgbColor.toHex())
+                rgb.setTextColor(invertColor(rgbColor))
             }
         }
     }

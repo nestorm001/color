@@ -51,7 +51,13 @@ fun String.printColor(@ColorMode.Mode colorMode: Int = ColorMode.RGB) {
     }
 }
 
+fun invertColor(color: Int): Int = color xor 0xFFFFFF
+
+fun Int.toHex() = Integer.toHexString(this).toUpperCase()
+
 private fun String.print(mode: String, color: Int) {
     if (!BuildConfig.DEBUG) return
     Log.d("wtf", "$mode color of $this is ${Integer.toHexString(color)}")
+    Log.d("wtf", "$mode invert color of $this is ${Integer.toHexString(
+        invertColor(color))}")
 }
