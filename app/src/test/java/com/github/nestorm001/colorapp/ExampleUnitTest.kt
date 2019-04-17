@@ -1,4 +1,4 @@
-package com.github.nestorm001.color
+package com.github.nestorm001.colorapp
 
 import org.junit.Test
 

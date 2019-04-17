@@ -1,8 +1,13 @@
-package com.github.nestorm001.color
+package com.github.nestorm001.colorapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
+import com.github.nestorm001.color.ColorMode
+import com.github.nestorm001.color.invertColor
+import com.github.nestorm001.color.printColor
+import com.github.nestorm001.color.toColor
+import com.github.nestorm001.color.toHex
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -23,7 +28,8 @@ class MainActivity : AppCompatActivity() {
                 val rgbColor = string.toColor(ColorMode.RGB)
                 rgb.setBackgroundColor(string.toColor(ColorMode.RGB))
                 rgb.text = getString(R.string.rgb, rgbColor.toHex())
-                rgb.setTextColor(invertColor(rgbColor))
+                rgb.setTextColor(invertColor(
+                    rgbColor))
             }
         }
     }

@@ -1,4 +1,4 @@
-package com.github.nestorm001.color
+package com.github.nestorm001.colorapp
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
